@@ -10,8 +10,7 @@ from .models import Mediterranean
 from .models import review
 from .models import drop
 from PIL import Image
-import PIL
-import Image
+
 
 import speech_recognition as sr
 import pyttsx3
