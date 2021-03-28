@@ -3,7 +3,12 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import TaskSerializer
+from .serializers import FoodSerializer
+from .serializers import PaleoSerializer
+from .serializers import VegetarianSerializer
+from .serializers import VeganSerializer
+from .serializers import KetogenicSerializer
+from .serializers import MediterraneanSerializer
 
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
@@ -36,9 +41,33 @@ def apiOverview(request):
 @api_view(['GET'])
 def FoodList(request):
 	foods = Food.objects.all().order_by('-id')
-	serializer = TaskSerializer(foods, many=True)
+	serializer = FoodSerializer(foods, many=True)
 	return Response(serializer.data)
 
+@api_view(['GET'])
+def PaleoList(request):
+	paleos = Paleo.objects.all().order_by('-id')
+	serializer = FoodSerializer(paleos, many=True)
+	return Response(serializer.data)
+
+
+@api_view(['GET'])
+def FoodList(request):
+	foods = Food.objects.all().order_by('-id')
+	serializer = FoodSerializer(foods, many=True)
+	return Response(serializer.data)
+
+@api_view(['GET'])
+def FoodList(request):
+	foods = Food.objects.all().order_by('-id')
+	serializer = FoodSerializer(foods, many=True)
+	return Response(serializer.data)
+
+@api_view(['GET'])
+def FoodList(request):
+	foods = Food.objects.all().order_by('-id')
+	serializer = FoodSerializer(foods, many=True)
+	return Response(serializer.data)
 
 def comment(request):
 	obj = review.objects.all()

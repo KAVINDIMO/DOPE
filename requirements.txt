@@ -13,3 +13,4 @@ Pillow==8.0.1
 djangorestframework==3.12.4
 Markdown==3.3.4
 django-filter==2.4.0
+django-cors-headers==3.7.0
