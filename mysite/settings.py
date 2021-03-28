@@ -28,7 +28,7 @@ SECRET_KEY = 'mfoqf%j74pkyvw6+bt%(__cp!^s@3j!@cq)e1npy#0==$a68dy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','dopemeal.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','dope2meal.herokuapp.com']
 
 
 # Application definition
