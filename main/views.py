@@ -1,4 +1,10 @@
 from django.shortcuts import render
+
+from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import TaskSerializer
+
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from .models import Paleo
@@ -17,6 +23,21 @@ import pyttsx3
 import wolframalpha
 import wikipedia
 import webbrowser
+
+
+@api_view(['GET'])
+def apiOverview(request):
+	api_urls = {
+		'List':'/food-list/',
+		}
+
+	return Response(api_urls)
+
+@api_view(['GET'])
+def FoodList(request):
+	foods = Food.objects.all().order_by('-id')
+	serializer = TaskSerializer(foods, many=True)
+	return Response(serializer.data)
 
 
 def comment(request):

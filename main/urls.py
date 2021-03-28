@@ -18,5 +18,5 @@ path('callcalcal/',views.callcalcal,name="calcal"),
 path('callcalcal/calcalculated/',views.calcal,name="calculatedcalcal"),
 path("testdropdown/",views.test,name="dropdown"),
 path("testdropdown/ama",views.okay,name="ama"),
-
+path('food-list/', views.FoodList, name="food-list")
 ]
