@@ -9,7 +9,7 @@ from .serializers import VegetarianSerializer
 from .serializers import VeganSerializer
 from .serializers import KetogenicSerializer
 from .serializers import MediterraneanSerializer
-
+from .serializers import NewsSerializer
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from .models import Paleo
@@ -20,6 +20,7 @@ from .models import Ketogenic
 from .models import Mediterranean
 from .models import review
 from .models import drop
+from .models import news
 from PIL import Image
 
 
@@ -67,6 +68,12 @@ def FoodList(request):
 def FoodList(request):
 	foods = Food.objects.all().order_by('-id')
 	serializer = FoodSerializer(foods, many=True)
+	return Response(serializer.data)
+
+@api_view(['GET'])
+def newsList(request):
+	n = news.objects.all.order_by('-id')
+	serializer = NewsSerializer(n,many=True)
 	return Response(serializer.data)
 
 def comment(request):

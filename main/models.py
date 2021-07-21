@@ -61,3 +61,9 @@ class drop(models.Model):
 		('heavy meal','heavy meal')
 		)
 	choicename= models.CharField(max_length=120,choices= mealchoice)
+
+
+class news(models.Model):
+	Title = models.CharField(max_length=50)
+	description = models.TextField(max_length=108)
+	img = models.ImageField(upload_to='images',default='static/images/DIET3.jpg')

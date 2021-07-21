@@ -5,6 +5,7 @@ from .models import Vegetarian
 from .models import Vegan
 from .models import Ketogenic
 from .models import Mediterranean
+from .models import news
 
 class FoodSerializer(serializers.ModelSerializer):
 	class Meta:
@@ -34,4 +35,9 @@ class KetogenicSerializer(serializers.ModelSerializer):
 class MediterraneanSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Mediterranean
+		fields ='__all__'
+
+class NewsSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = news
 		fields ='__all__'

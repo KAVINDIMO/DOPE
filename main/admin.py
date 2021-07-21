@@ -7,6 +7,7 @@ from .models import Ketogenic
 from .models import Mediterranean
 from .models import review
 from .models import drop
+from .models import news
 
 # Register your models here.
 admin.site.register(Food)
@@ -17,3 +18,4 @@ admin.site.register(Ketogenic)
 admin.site.register(Mediterranean)
 admin.site.register(review)
 admin.site.register(drop)
+admin.site.register(news)
