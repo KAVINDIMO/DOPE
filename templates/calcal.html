@@ -1,47 +1,107 @@
-{% load static %}
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Document</title>
+</head>
 <body>
+ 
+  <nav class="navbar">
+   <ul class="nav" style="list-style-type: none;">
+   <li class="nav-item"><a class="nav-link" href="/basic"><i style="font-size: 50px;" class="material-icons">home</i></a></li>
+   <li class="nav-item"><i style="font-size: 50px;" class="material-icons">list</i></li>
+   <li class="nav-item"><i style="font-size: 50px;" class="material-icons">search</i></li>
+   <li class="nav-item"><i style="font-size: 50px;" class="material-icons">group</i></li>
+   <li class="nav-item"><i style="font-size: 50px;" class="material-icons">sports_esports</i></li>
+   <li class="nav-item"><i style="font-size: 50px;" class="material-icons">sports_esports</i></li>
+   <li class="nav-item"><i style="font-size: 50px;" class="material-icons">sports_esports</i></li>
 
-<form class="CAL"action="calcalculated">
-<h1>welcome to calorie calculator</h1>
-enter the food name to find its details:<input type="text" name="Foodname"><br>
-Processing your foods details...
-<button class="butt">
-SUBMIT
-</button>
-</form>
+   </ul>
+  </nav>
+  <main>
+    <div>
+      <form class="CAL" action="calcalculated">
+        <h1>welcome to calorie calculator</h1>
+        enter the food name to find its details:<input
+          type="text"
+          name="Foodname"
+        /><br />
+        Processing your foods details...
+        <button class="butt">SUBMIT</button>
+      </form>
+    </div>
+  </main>
 </body>
 </html>
 
 <style>
-body{
-    background-color:#EE00FF;
-    background-image:url("{% static 'images/DIET5.jpg' %}" );
-    background-size:950px 800px;
-}
-.CAL{
-       animation-name:rainbow;
-       animation-duration:4s;
-       animation-iteration-count: infinite;
+  :root{
+    
+    font-family: 'Courier New', Courier, monospace;
+  }
+  body{
+    background-color:coral;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  main{
+    margin-left: 5rem;
+    padding: 1rem;
+   
+  
+  }
+  i{
+    
+    color: rgb(211, 101, 11);
+    
+   
+  }
+
+  .navbar {
+     width:5rem;
+     height:100vh;
+     position:fixed;
+    background-color: #5f065f;
+
+  }
+  .nav{
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  .nav-item{
+    display: flex;
+    align-self: center;
+  }
 
 
+  .CAL {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }
   @keyframes rainbow {
-  0% {
-    background-color: blue;
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
   }
-  50% {
-    background-color: green;
+  .butt {
+    background-color: red;
+    text-font: bold;
+    border-radius: 50%;
   }
-   100% {
-    background-color: yellow;
-  }
-}
-.butt{
-    background-color:red;
-    text-font:bold;
-    border-radius:50%;
-}
-  
-
 </style>
